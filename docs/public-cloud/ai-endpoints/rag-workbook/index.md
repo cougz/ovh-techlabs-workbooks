@@ -12,5 +12,5 @@ A complete RAG system that:
 
 ## Resources
 
-- [**Complete Guide**](setup-guide.md) - Full implementation with embedded code examples
+- [**Complete Guide**](workbook.md) - Full implementation with embedded code examples
 - **Source Code** - Will be available in the official examples repository (coming soon)

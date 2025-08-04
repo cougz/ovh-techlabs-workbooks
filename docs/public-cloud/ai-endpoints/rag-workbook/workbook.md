@@ -61,7 +61,7 @@ Before we start building, let's understand what we'll create. This RAG workbook 
 ## Step 1: Update System and Install Python
 
 !!! tip "System Requirements"
-    This tutorial requires Python 3.11+ and pip. The commands below will ensure your system is up-to-date.
+    This workbook requires Python 3.11+ and pip. The commands below will ensure your system is up-to-date.
 
 === "Debian/Ubuntu"
     ```bash
@@ -102,7 +102,7 @@ Before we start building, let's understand what we'll create. This RAG workbook 
 ## Step 2: Get OVHcloud AI Endpoints Access Token
 
 !!! warning "API Token Required"
-    This tutorial requires an OVHcloud AI Endpoints access token. Without this token, you won't be able to access the embedding and LLM APIs.
+    This workbook requires an OVHcloud AI Endpoints access token. Without this token, you won't be able to access the embedding and LLM APIs.
 
 ### Access Token Steps
 
@@ -112,7 +112,7 @@ Before we start building, let's understand what we'll create. This RAG workbook 
 - [ ] Create a new Public Cloud Project or select an existing one
 - [ ] Navigate to **AI Endpoints** → **API keys** section
 - [ ] Click on **Create a new API key** button
-- [ ] Copy the generated token for use in this tutorial
+- [ ] Copy the generated token for use in this workbook
 
 !!! tip "Token Security"
     Your API token is sensitive information. Never share it publicly or commit it to version control systems. We'll use environment variables to keep it secure.
@@ -125,7 +125,7 @@ flowchart TD
     D --> E[Go to AI Endpoints]
     E --> F[Create API Key]
     F --> G[Copy Token]
-    G --> H[Use in Tutorial]
+    G --> H[Use in Workbook]
     style F fill:#f96,stroke:#333,stroke-width:2px
     style G fill:#f96,stroke:#333,stroke-width:2px
 ```

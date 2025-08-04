@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 site_name: OVHcloud TechLabs - Workbooks
-site_description: Comprehensive tutorials and workbooks for OVHcloud TechLabs
+site_description: Comprehensive workbooks for OVHcloud TechLabs
 site_url: https://cougz.github.io/ovh-techlabs-workbooks
 
 # Repository
@@ -100,8 +100,8 @@ nav:
     - AI Endpoints:
       - Overview: public-cloud/ai-endpoints/index.md
       - RAG Workbook:
-        - Overview: public-cloud/ai-endpoints/rag-tutorial/index.md
-        - Complete Guide: public-cloud/ai-endpoints/rag-tutorial/setup-guide.md
+        - Overview: public-cloud/ai-endpoints/rag-workbook/index.md
+        - Complete Guide: public-cloud/ai-endpoints/rag-workbook/workbook.md
       - VLM Workbook:
-        - Overview: public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/index.md
-        - Complete Guide: public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/setup-guide.md
+        - Overview: public-cloud/ai-endpoints/vlm-workbook-car-damage-verification/index.md
+        - Complete Guide: public-cloud/ai-endpoints/vlm-workbook-car-damage-verification/workbook.md

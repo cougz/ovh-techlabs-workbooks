@@ -213,7 +213,7 @@ OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here
 QWEN_URL=https://qwen-2-5-vl-72b-instruct.endpoints.kepler.ai.cloud.ovh.net/api/openai_compat/v1/chat/completions
 ```
 
-## Step 6: Download Tutorial Files
+## Step 6: Download Workbook Files
 
 Download all the required Python files from the repository:
 
@@ -236,7 +236,7 @@ Download all the required Python files from the repository:
     # Clone the repository
     git clone https://github.com/ovh/public-cloud-examples.git
     
-    # Copy VLM tutorial files to your demo directory
+    # Copy VLM workbook files to your demo directory
     cp public-cloud-examples/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt .
     cp public-cloud-examples/ai/ai-endpoints/car-damage-verification-using-vlm/*.py .
     cp public-cloud-examples/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md .
@@ -248,7 +248,7 @@ Download all the required Python files from the repository:
 === "Option 3: Manual Download"
     Visit the GitHub repository and download files manually:
     
-    1. Go to [VLM Tutorial Files](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm)
+    1. Go to [VLM Workbook Files](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm)
     2. Click on each file and download:
        - `requirements.txt`
        - `test_vision_connection.py`
@@ -401,7 +401,7 @@ mkdir results
 mkdir ~/car-verification-demo && cd ~/car-verification-demo && \
 python3 -m venv venv && source venv/bin/activate
 
-# Download all tutorial files
+# Download all workbook files
 curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
 curl -o test_vision_connection.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
 curl -o verification_demo.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py

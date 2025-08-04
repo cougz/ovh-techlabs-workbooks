@@ -13,7 +13,7 @@ An interactive car verification challenge that:
 
 ## Learning Path
 
-1. [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial
+1. [**Workbook Guide**](workbook.md) - Complete step-by-step workbook
 2. **Download Scripts** - [All Python files](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm)
 
 ## Demo Overview
@@ -42,7 +42,7 @@ The **Car Verification Challenge** is an interactive fact-checking experiment wh
     - Car photos for testing (at least 3 images)
     - Linux/macOS/Windows environment
 
-[Start Tutorial](setup-guide.md){ .md-button .md-button--primary }
+[Start Workbook](workbook.md){ .md-button .md-button--primary }
 [View Source Code](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm){ .md-button }
 
 ## Technology Stack
@@ -55,7 +55,7 @@ The **Car Verification Challenge** is an interactive fact-checking experiment wh
 
 ## Educational Value
 
-This tutorial demonstrates:
+This workbook demonstrates:
 - **Vision Language Model integration** - Practical VLM implementation
 - **Multi-modal prompting** - Combining text and image inputs
 - **Verification systems** - AI-powered fact-checking
