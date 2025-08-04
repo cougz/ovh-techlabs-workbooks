@@ -1,5 +1,5 @@
 # OVHcloud TechLabs - Workbooks
 
-Welcome to the comprehensive collection of workbooks for OVHcloud services.
+Welcome! Here you'll find the complete set of Workbooks created for OVHcloud's TechLabs program.
 
 [Browse Public Cloud Workbooks](public-cloud/){ .md-button .md-button--primary }
