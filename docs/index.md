@@ -17,3 +17,4 @@ Welcome to the comprehensive collection of tutorials and workbooks for OVHcloud 
 - Networking tutorials
 
 [Browse All Workbooks](/ovhcloud-workbooks/public-cloud/){ .md-button .md-button--primary }
+# Last updated: Mon Aug  4 10:40:28 AM CEST 2025
