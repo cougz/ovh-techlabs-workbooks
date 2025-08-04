@@ -13,7 +13,7 @@ A complete RAG system that:
 ## Learning Path
 
 1. [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial
-2. **Download Scripts** - [All Python files](https://github.com/cougz/ovhcloud-workbooks/tree/main/public-cloud/ai-endpoints/rag-tutorial/scripts)
+2. **Download Scripts** - [All Python files](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/rag-tutorial)
 
 ## Quick Start
 
@@ -24,4 +24,4 @@ A complete RAG system that:
     - Linux environment (Debian 12 recommended)
 
 [Start Tutorial](setup-guide.md){ .md-button .md-button--primary }
-[Download Scripts](https://github.com/cougz/ovhcloud-workbooks/tree/main/public-cloud/ai-endpoints/rag-tutorial/scripts){ .md-button }
+[Download Scripts](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/rag-tutorial){ .md-button }

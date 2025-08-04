@@ -14,7 +14,7 @@ An interactive car verification challenge that:
 ## Learning Path
 
 1. [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial
-2. **Download Scripts** - [All Python files](/ovhcloud-workbooks/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/scripts/)
+2. **Download Scripts** - [All Python files](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm)
 
 ## Demo Overview
 
@@ -43,7 +43,7 @@ The **Car Verification Challenge** is an interactive fact-checking experiment wh
     - Linux/macOS/Windows environment
 
 [Start Tutorial](setup-guide.md){ .md-button .md-button--primary }
-[Download Scripts](https://github.com/cougz/ovhcloud-workbooks/tree/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication){ .md-button }
+[Download Scripts](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm){ .md-button }
 
 ## Technology Stack
 

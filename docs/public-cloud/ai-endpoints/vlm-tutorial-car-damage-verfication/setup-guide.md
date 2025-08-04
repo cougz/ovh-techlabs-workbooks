@@ -115,7 +115,7 @@ Download the requirements file from the repository:
 
 ```bash
 # Download requirements.txt
-curl -o requirements.txt https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/requirements.txt
+curl -o requirements.txt https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
 
 # Install all dependencies
 pip install -r requirements.txt
@@ -152,11 +152,11 @@ Download all the required Python files from the repository:
     
     ```bash
     # Download all required files
-    curl -o requirements.txt https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/requirements.txt
-    curl -o test_vision_connection.py https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/test_vision_connection.py
-    curl -o verification_demo.py https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/verification_demo.py
-    curl -o verification_app.py https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/verification_app.py
-    curl -o chainlit.md https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/chainlit.md
+    curl -o requirements.txt https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
+    curl -o test_vision_connection.py https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
+    curl -o verification_demo.py https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py
+    curl -o verification_app.py https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/verification_app.py
+    curl -o chainlit.md https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/chainlit.md
     ```
 
 === "Option 2: Clone Repository"
@@ -164,21 +164,21 @@ Download all the required Python files from the repository:
     
     ```bash
     # Clone the repository
-    git clone https://github.com/cougz/ovhcloud-workbooks.git
+    git clone https://github.com/cougz/ovh-techlabs-workbooks.git
     
     # Copy VLM tutorial files to your demo directory
-    cp ovhcloud-workbooks/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/requirements.txt .
-    cp ovhcloud-workbooks/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/*.py .
-    cp ovhcloud-workbooks/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/chainlit.md .
+    cp ovh-techlabs-workbooks/public-cloud/ai-endpoints/car-damage-verification-using-vlm/requirements.txt .
+    cp ovh-techlabs-workbooks/public-cloud/ai-endpoints/car-damage-verification-using-vlm/*.py .
+    cp ovh-techlabs-workbooks/public-cloud/ai-endpoints/car-damage-verification-using-vlm/chainlit.md .
     
     # Clean up
-    rm -rf ovhcloud-workbooks
+    rm -rf ovh-techlabs-workbooks
     ```
 
 === "Option 3: Manual Download"
     Visit the GitHub repository and download files manually:
     
-    1. Go to [VLM Tutorial Files](https://github.com/cougz/ovhcloud-workbooks/tree/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication)
+    1. Go to [VLM Tutorial Files](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm)
     2. Click on each file and download:
        - `requirements.txt`
        - `test_vision_connection.py`
@@ -188,7 +188,7 @@ Download all the required Python files from the repository:
     3. Save them to your `~/car-verification-demo` directory
 
 !!! tip "File Contents"
-    You can also view the complete source code for each file in the [repository](https://github.com/cougz/ovhcloud-workbooks/tree/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication) to understand how the VLM verification system works.
+    You can also view the complete source code for each file in the [repository](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm) to understand how the VLM verification system works.
 
 ## Step 7: Test OVHcloud Vision API Connectivity
 
@@ -334,11 +334,11 @@ mkdir ~/car-verification-demo && cd ~/car-verification-demo && \
 python3 -m venv venv && source venv/bin/activate
 
 # Download all tutorial files
-curl -o requirements.txt https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/requirements.txt
-curl -o test_vision_connection.py https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/test_vision_connection.py
-curl -o verification_demo.py https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/verification_demo.py
-curl -o verification_app.py https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/verification_app.py
-curl -o chainlit.md https://raw.githubusercontent.com/cougz/ovhcloud-workbooks/main/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/chainlit.md
+curl -o requirements.txt https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
+curl -o test_vision_connection.py https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
+curl -o verification_demo.py https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py
+curl -o verification_app.py https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/verification_app.py
+curl -o chainlit.md https://raw.githubusercontent.com/cougz/ovh-techlabs-workbooks/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm/chainlit.md
 
 # Install dependencies
 pip install -r requirements.txt

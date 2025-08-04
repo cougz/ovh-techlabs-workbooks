@@ -1,10 +1,10 @@
 site_name: OVHcloud TechLabs - Workbooks
 site_description: Comprehensive tutorials and workbooks for OVHcloud TechLabs
-site_url: https://ovhcloud.github.io/ovh-techlabs-workbooks
+site_url: https://cougz.github.io/ovh-techlabs-workbooks
 
 # Repository
-repo_name: ovhcloud/ovh-techlabs-workbooks
-repo_url: https://github.com/ovhcloud/ovh-techlabs-workbooks
+repo_name: cougz/ovh-techlabs-workbooks
+repo_url: https://github.com/cougz/ovh-techlabs-workbooks
 
 # Copyright
 copyright: Copyright &copy; 2025 OVHcloud
@@ -61,7 +61,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/ovhcloud/ovh-techlabs-workbooks
+      link: https://github.com/cougz/ovh-techlabs-workbooks
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/ovhcloud
     - icon: fontawesome/brands/linkedin

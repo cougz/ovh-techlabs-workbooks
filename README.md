@@ -4,8 +4,8 @@ A comprehensive collection of tutorials and workbooks for OVHcloud TechLabs.
 
 ## Quick Links
 
-- **Documentation Site**: [https://ovhcloud.github.io/ovh-techlabs-workbooks/](https://ovhcloud.github.io/ovh-techlabs-workbooks/)
-- **Source Repository**: [https://github.com/ovhcloud/ovh-techlabs-workbooks](https://github.com/ovhcloud/ovh-techlabs-workbooks)
+- **Documentation Site**: [https://cougz.github.io/ovh-techlabs-workbooks/](https://cougz.github.io/ovh-techlabs-workbooks/)
+- **Source Repository**: [https://github.com/cougz/ovh-techlabs-workbooks](https://github.com/cougz/ovh-techlabs-workbooks)
 
 ## Available Workbooks
 
@@ -26,7 +26,7 @@ mkdocs serve
 
 ## Deployment
 
-The documentation is automatically deployed to GitHub Pages using GitHub Actions when changes are pushed to the main branch. The workflow builds the MkDocs site and publishes it to `https://ovhcloud.github.io/ovh-techlabs-workbooks/`.
+The documentation is automatically deployed to GitHub Pages using GitHub Actions when changes are pushed to the main branch. The workflow builds the MkDocs site and publishes it to `https://cougz.github.io/ovh-techlabs-workbooks/`.
 
 ## Repository Structure
 
