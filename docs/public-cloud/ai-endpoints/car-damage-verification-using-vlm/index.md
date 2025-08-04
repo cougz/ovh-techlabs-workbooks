@@ -3,4 +3,4 @@
 ## Resources
 
 - [**Workbook**](workbook.md) - Full step-by-step workbook
-- **Source Code** - Will be available in the official examples repository (coming soon)
+- **Source Code** - [View on GitHub](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm)
