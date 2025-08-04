@@ -12,5 +12,5 @@ A complete RAG system that:
 
 ## Resources
 
-- [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial
-- [**Source Code**](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/rag-tutorial) - All Python files in official examples repository
+- [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial with embedded code examples
+- **Source Code** - Will be available in the official examples repository (coming soon)

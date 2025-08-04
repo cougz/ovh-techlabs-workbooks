@@ -135,49 +135,28 @@ Add your actual OVHcloud token:
 OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here
 ```
 
-## Source Code Reference
+## About This Tutorial
 
-This tutorial builds a complete RAG system step-by-step. All source code is also available in the official examples repository:
+This tutorial builds a complete RAG system step-by-step with embedded code examples and detailed explanations.
 
-!!! example "RAG Tutorial Source Code"
+!!! info "Source Code Availability"
     
-    === "📂 Repository"
-        **Official Examples**: [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/rag-tutorial)
+    === "📚 Tutorial Approach"
+        **This tutorial includes:**
+        - Complete code examples embedded in the guide
+        - Step-by-step explanations of each component
+        - Copy-paste ready code snippets
+        - Comprehensive setup instructions
         
-        The repository contains:
-        - Complete working examples
-        - Requirements file  
-        - Documentation
-        - Test scripts
-        
-        [🔗 View on GitHub](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/rag-tutorial){ .md-button }
+        **Best for**: Learning RAG concepts and implementation details
 
-    === "🚀 Quick Setup"
-        ```bash
-        # Clone the examples repository
-        git clone https://github.com/ovh/public-cloud-examples.git
-        cd public-cloud-examples/ai/ai-endpoints/rag-tutorial
+    === "🔮 Future Repository"
+        **Official examples repository:**
+        - Source code will be available in [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples) (coming soon)
+        - Ready-to-run implementation files
+        - Production-ready code structure
         
-        # Set up environment
-        python3 -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
-        
-        # Configure your token
-        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
-        
-        # Run the examples
-        python test_ovh_connection.py
-        python my_rag_app.py
-        ```
-
-    === "📋 Tutorial vs Repository"
-        | Approach | Best For | Content |
-        |----------|----------|---------|
-        | **This Tutorial** | Learning & Understanding | Step-by-step guide with explanations |
-        | **Repository Code** | Quick Implementation | Ready-to-run examples |
-        
-        **Recommendation**: Follow this tutorial for learning, then reference the repository for production implementations.
+        **Best for**: Quick deployment and reference implementations
 
 ## Step 6: Test OVHcloud API Connectivity
 
