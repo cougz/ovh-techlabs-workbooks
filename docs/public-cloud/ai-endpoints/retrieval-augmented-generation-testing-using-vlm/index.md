@@ -1,4 +1,4 @@
-# RAG with OVHcloud AI Endpoints Workbook
+# Retrieval Augmented Generation Testing Using VLM
 
 Build Retrieval-Augmented Generation systems for testing using OVHcloud AI Endpoints.
 
@@ -12,5 +12,5 @@ A complete RAG system that:
 
 ## Resources
 
-- [**Complete Guide**](workbook.md) - Full implementation with embedded code examples
+- [**Workbook**](workbook.md) - Full implementation with embedded code examples
 - **Source Code** - Will be available in the official examples repository (coming soon)

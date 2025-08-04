@@ -99,9 +99,9 @@ nav:
     - Overview: public-cloud/index.md
     - AI Endpoints:
       - Overview: public-cloud/ai-endpoints/index.md
-      - RAG Workbook:
+      - Retrieval Augmented Generation Testing Using VLM:
         - Overview: public-cloud/ai-endpoints/retrieval-augmented-generation-testing-using-vlm/index.md
-        - Complete Guide: public-cloud/ai-endpoints/retrieval-augmented-generation-testing-using-vlm/workbook.md
-      - VLM Workbook:
+        - Workbook: public-cloud/ai-endpoints/retrieval-augmented-generation-testing-using-vlm/workbook.md
+      - Car Damage Verification Using VLM:
         - Overview: public-cloud/ai-endpoints/car-damage-verification-using-vlm/index.md
-        - Complete Guide: public-cloud/ai-endpoints/car-damage-verification-using-vlm/workbook.md
+        - Workbook: public-cloud/ai-endpoints/car-damage-verification-using-vlm/workbook.md

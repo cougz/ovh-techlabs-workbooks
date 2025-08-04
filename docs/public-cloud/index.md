@@ -4,8 +4,8 @@ Comprehensive workbooks for OVHcloud Public Cloud services.
 
 ## AI Endpoints
 
-- [**RAG Workbook**](ai-endpoints/retrieval-augmented-generation-testing-using-vlm/) - Complete guide to Retrieval-Augmented Generation for testing
-- [**VLM Workbook**](ai-endpoints/car-damage-verification-using-vlm/) - Interactive car verification using Vision Language Models
+- [**Retrieval Augmented Generation Testing Using VLM**](ai-endpoints/retrieval-augmented-generation-testing-using-vlm/) - Complete guide to Retrieval-Augmented Generation for testing
+- [**Car Damage Verification Using VLM**](ai-endpoints/car-damage-verification-using-vlm/) - Interactive car verification using Vision Language Models
 
 ## Coming Soon
 
