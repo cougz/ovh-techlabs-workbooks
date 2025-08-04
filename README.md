@@ -17,14 +17,6 @@ A comprehensive collection of workbooks for OVHcloud TechLabs.
 - **Documentation Site**: [https://cougz.github.io/ovh-techlabs-workbooks/](https://cougz.github.io/ovh-techlabs-workbooks/)
 - **Source Repository**: [https://github.com/cougz/ovh-techlabs-workbooks](https://github.com/cougz/ovh-techlabs-workbooks)
 
-## Available Workbooks
-
-### Public Cloud
-
-#### AI Endpoints
-- **Retrieval Augmented Generation Testing Using VLM** - Build lab-ready RAG systems using OVHcloud AI Endpoints
-- **Car Damage Verification Using VLM** - Car damage verification using Vision Language Models
-
 ## Development
 
 This repository uses MkDocs with the Material theme to generate documentation. To run locally:
@@ -80,3 +72,5 @@ This project is maintained by the OVHcloud TechLabs team. For questions and issu
 ## About TechLabs
 
 OVHcloud TechLabs is an official educational program that provides hands-on workshops and learning materials for cloud technologies. These workbooks are designed to support TechLabs events and self-paced learning.
+
+To learn more about OVHcloud TechLabs and upcoming events, please contact your local OVHcloud representative.
