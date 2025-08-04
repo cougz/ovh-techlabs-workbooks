@@ -1,7 +1,7 @@
-# VLM Tutorial - Car Verification Setup Guide
+# VLM Workbook - Car Verification
 
-!!! info "About this guide"
-    This step-by-step tutorial will walk you through testing the AI car verification demo using OVHcloud's Vision Language Models. Follow each step carefully to explore AI vision capabilities.
+!!! info "About this workbook"
+    This comprehensive workbook will walk you through testing the AI car verification demo using OVHcloud's Vision Language Models. Follow each step carefully to explore AI vision capabilities.
 
 ## Prerequisites
 
@@ -123,7 +123,7 @@ Before we start, let's understand what we'll be building. The VLM car verificati
 ## Step 2: Get OVHcloud AI Endpoints Access Token
 
 !!! warning "Vision Model Access Required"
-    This demo requires access to OVHcloud's Qwen2.5-VL-72B-Instruct model. You'll need an AI Endpoints access token.
+    This workbook requires access to OVHcloud's Qwen2.5-VL-72B-Instruct model. You'll need an AI Endpoints access token.
 
 ### Token Acquisition Steps
 

@@ -1,7 +1,7 @@
-# RAG Tutorial Setup Guide
+# RAG Workbook
 
-!!! info "About this guide"
-    This step-by-step tutorial will walk you through building a lab-ready RAG system using OVHcloud AI Endpoints. Follow each step carefully to ensure a successful setup.
+!!! info "About this workbook"
+    This comprehensive workbook will walk you through building a lab-ready RAG system using OVHcloud AI Endpoints. Follow each step carefully to ensure a successful implementation.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@
 
 ## Understanding the Code
 
-Before we start building, let's understand what we'll create. This RAG tutorial builds a complete system step-by-step:
+Before we start building, let's understand what we'll create. This RAG workbook builds a complete system step-by-step:
 
 !!! example "RAG System Overview"
     
@@ -54,7 +54,7 @@ Before we start building, let's understand what we'll create. This RAG tutorial 
         # Configure your OVHcloud token
         echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here" > .env
         
-        # The tutorial will guide you through creating the Python files step-by-step
+        # The workbook will guide you through creating the Python files step-by-step
         # This ensures you understand each component of the RAG system
         ```
 
@@ -184,18 +184,18 @@ Add your actual OVHcloud token:
 OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here
 ```
 
-## About This Tutorial
+## About This Workbook
 
-This tutorial builds a complete RAG system step-by-step with embedded code examples and detailed explanations.
+This workbook builds a complete RAG system step-by-step with embedded code examples and detailed explanations.
 
 !!! info "Source Code Availability"
     
-    === "📚 Tutorial Approach"
-        **This tutorial includes:**
+    === "📚 Workbook Approach"
+        **This workbook includes:**
         - Complete code examples embedded in the guide
         - Step-by-step explanations of each component
         - Copy-paste ready code snippets
-        - Comprehensive setup instructions
+        - Comprehensive implementation instructions
         
         **Best for**: Learning RAG concepts and implementation details
 

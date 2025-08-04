@@ -1,4 +1,4 @@
-# RAG with OVHcloud AI Endpoints Tutorial
+# RAG with OVHcloud AI Endpoints Workbook
 
 Build Retrieval-Augmented Generation systems for testing using OVHcloud AI Endpoints.
 
@@ -12,5 +12,5 @@ A complete RAG system that:
 
 ## Resources
 
-- [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial with embedded code examples
+- [**Complete Guide**](setup-guide.md) - Full implementation with embedded code examples
 - **Source Code** - Will be available in the official examples repository (coming soon)

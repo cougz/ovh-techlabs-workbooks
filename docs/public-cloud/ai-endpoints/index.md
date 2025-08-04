@@ -2,11 +2,11 @@
 
 Learn to build AI applications using OVHcloud AI Endpoints.
 
-## Available Tutorials
+## Available Workbooks
 
-### [RAG Tutorial](/ovhcloud-workbooks/public-cloud/ai-endpoints/rag-tutorial/)
+### [RAG Workbook](rag-tutorial/)
 Build Retrieval-Augmented Generation systems for testing with:
-- Step-by-step setup guide
+- Complete implementation guide
 - Real OVHcloud integration
 - Performance optimization
 - Hands-on experiments
@@ -15,7 +15,7 @@ Build Retrieval-Augmented Generation systems for testing with:
 **Time:** 2-3 hours  
 **Prerequisites:** Basic Python, OVHcloud account
 
-### [VLM Tutorial - Car Verification](/ovhcloud-workbooks/public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/)
+### [VLM Workbook - Car Verification](vlm-tutorial-car-damage-verfication/)
 Build an interactive car verification system using Vision Language Models:
 - Multi-modal AI fact-checking
 - Interactive Chainlit web application
@@ -28,7 +28,7 @@ Build an interactive car verification system using Vision Language Models:
 
 ## Coming Soon
 
-- Multi-modal AI tutorials
-- Fine-tuning guides
+- Multi-modal AI workbooks
+- Fine-tuning workbooks
 - Advanced prompt engineering
-- Production deployment guides
+- Production deployment workbooks

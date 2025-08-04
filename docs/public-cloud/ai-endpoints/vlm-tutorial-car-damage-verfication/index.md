@@ -1,4 +1,4 @@
-# VLM Tutorial - Car Damage Verification
+# VLM Workbook - Car Damage Verification
 
 Build an interactive AI-powered car verification system using OVHcloud Vision Language Models.
 
