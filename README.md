@@ -6,11 +6,11 @@ A comprehensive collection of workbooks for OVHcloud TechLabs.
 
 ## Project Status
 
-**Status**: Active maintenance - Example project  
-**Support Level**: Community support  
+**Status**: Active maintenance - Official TechLabs project  
+**Support Level**: OVHcloud TechLabs team  
 **Type**: Educational workbooks and documentation
 
-> **Note**: This is not an official OVHcloud product. This repository contains educational workbooks and examples for learning OVHcloud services.
+> **Note**: This repository contains official educational workbooks for OVHcloud's TechLabs program. TechLabs is an official OVHcloud educational initiative.
 
 ## Quick Links
 
@@ -22,8 +22,8 @@ A comprehensive collection of workbooks for OVHcloud TechLabs.
 ### Public Cloud
 
 #### AI Endpoints
-- **RAG Workbook** - Build lab-ready RAG systems using OVHcloud AI Endpoints
-- **VLM Workbook** - Car damage verification using Vision Language Models
+- **Retrieval Augmented Generation Testing Using VLM** - Build lab-ready RAG systems using OVHcloud AI Endpoints
+- **Car Damage Verification Using VLM** - Car damage verification using Vision Language Models
 
 ## Development
 
@@ -71,11 +71,12 @@ Please note that this project follows the OVHcloud code of conduct. By participa
 
 ## Support
 
-This is a community-supported project. For questions and issues:
+This project is maintained by the OVHcloud TechLabs team. For questions and issues:
 - Create an issue in this repository
 - Check existing documentation
 - Review closed issues for solutions
+- Contact the TechLabs team for workshop-related inquiries
 
-## Disclaimer
+## About TechLabs
 
-This repository is not an official OVHcloud product and is maintained by the community for educational purposes.
+OVHcloud TechLabs is an official educational program that provides hands-on workshops and learning materials for cloud technologies. These workbooks are designed to support TechLabs events and self-paced learning.
