@@ -10,6 +10,65 @@
 - [ ] Car photos for testing (at least 3 different images)
 - [ ] Linux/macOS/Windows environment
 
+## Understanding the Code
+
+Before we start, let's understand what we'll be building. The VLM car verification system consists of several key files:
+
+!!! example "Source Code Overview"
+    
+    === "📋 All Files"
+        **Repository**: [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm)
+        
+        | File | Purpose | Action |
+        |------|---------|--------|
+        | `requirements.txt` | Python dependencies | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt) |
+        | `test_vision_connection.py` | API connectivity test | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py) |
+        | `verification_demo.py` | Core verification logic | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py) |
+        | `verification_app.py` | Chainlit web interface | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py) |
+        | `chainlit.md` | App welcome page | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md) |
+
+    === "📖 Code Structure"
+        **Files Overview**:
+        - `verification_demo.py` - Core VLM integration and verification logic
+        - `verification_app.py` - Chainlit web interface for user interaction
+        - `test_vision_connection.py` - API connectivity testing
+        - `chainlit.md` - Application welcome page and instructions
+        
+        **Key Features**:
+        - Async image processing with base64 encoding
+        - Multi-modal prompt engineering for VLM
+        - Interactive web interface with file uploads
+        - Real-time AI-powered verification results
+
+    === "🚀 Complete Setup Commands"
+        ```bash
+        # Create demo directory and navigate to it
+        mkdir ~/car-verification-demo
+        cd ~/car-verification-demo
+        
+        # Create Python virtual environment
+        python3 -m venv venv
+        source venv/bin/activate  # Linux/macOS
+        # OR for Windows: venv\Scripts\activate
+        
+        # Download all files at once
+        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
+        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
+        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py
+        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py
+        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md
+        
+        # Install dependencies
+        pip install -r requirements.txt
+        
+        # Configure your OVHcloud token
+        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here" > .env
+        
+        # Test API connection and run the demo
+        python test_vision_connection.py
+        chainlit run verification_app.py
+        ```
+
 ## Step 1: System Setup and Python Installation
 
 !!! tip "System Requirements"
@@ -187,50 +246,6 @@ Download all the required Python files from the repository:
        - `chainlit.md`
     3. Save them to your `~/car-verification-demo` directory
 
-## Understanding the Code
-
-The VLM car verification system consists of several key files. Here's what each one does:
-
-!!! example "Source Code Overview"
-    
-    === "📋 All Files"
-        **Repository**: [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm)
-        
-        | File | Purpose | Action |
-        |------|---------|--------|
-        | `requirements.txt` | Python dependencies | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt) |
-        | `test_vision_connection.py` | API connectivity test | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py) |
-        | `verification_demo.py` | Core verification logic | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py) |
-        | `verification_app.py` | Chainlit web interface | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py) |
-        | `chainlit.md` | App welcome page | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md) |
-
-    === "📖 Code Structure"
-        **Files Overview**:
-        - `verification_demo.py` - Core VLM integration and verification logic
-        - `verification_app.py` - Chainlit web interface for user interaction
-        - `test_vision_connection.py` - API connectivity testing
-        - `chainlit.md` - Application welcome page and instructions
-        
-        **Key Features**:
-        - Async image processing with base64 encoding
-        - Multi-modal prompt engineering for VLM
-        - Interactive web interface with file uploads
-        - Real-time AI-powered verification results
-
-    === "🚀 Quick Start Commands"
-        ```bash
-        # Download all files at once
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md
-        
-        # Install dependencies and run
-        pip install -r requirements.txt
-        python test_vision_connection.py
-        chainlit run verification_app.py
-        ```
 
 ## Step 7: Test OVHcloud Vision API Connectivity
 

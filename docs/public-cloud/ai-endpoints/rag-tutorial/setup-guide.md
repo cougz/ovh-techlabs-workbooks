@@ -9,6 +9,55 @@
 - [ ] Basic Python knowledge
 - [ ] Linux environment (Debian 12 recommended)
 
+## Understanding the Code
+
+Before we start building, let's understand what we'll create. This RAG tutorial builds a complete system step-by-step:
+
+!!! example "RAG System Overview"
+    
+    === "📋 What We'll Build"
+        **Complete RAG Pipeline**:
+        
+        | Component | Purpose | Implementation |
+        |-----------|---------|----------------|
+        | `test_ovh_connection.py` | API connectivity test | OVHcloud endpoints verification |
+        | `my_rag_app.py` | Complete RAG system | Embedding + LLM integration |
+        | Knowledge processing | Document ingestion | Text splitting and vectorization |
+        | Vector database | Semantic search | FAISS for similarity matching |
+        | Query processing | User question handling | Context retrieval + generation |
+
+    === "📖 System Architecture"
+        **Key Components**:
+        - **Embedding Model**: OVHcloud AI Endpoints for text vectorization
+        - **LLM**: OVHcloud AI Endpoints for response generation  
+        - **Vector Store**: FAISS for efficient similarity search
+        - **Framework**: LangChain for RAG orchestration
+        
+        **Data Flow**:
+        1. Documents → Text splitting → Embeddings → Vector store
+        2. User query → Embedding → Similarity search → Context retrieval
+        3. Context + Query → LLM → Generated response
+
+    === "🚀 Complete Setup Commands"
+        ```bash
+        # Create project directory and navigate to it
+        mkdir ~/rag-ovh-demo
+        cd ~/rag-ovh-demo
+        
+        # Create Python virtual environment
+        python3 -m venv venv
+        source venv/bin/activate
+        
+        # Install all required dependencies
+        pip install langchain langchain-community faiss-cpu requests openai python-dotenv numpy
+        
+        # Configure your OVHcloud token
+        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here" > .env
+        
+        # The tutorial will guide you through creating the Python files step-by-step
+        # This ensures you understand each component of the RAG system
+        ```
+
 ## Step 1: Update System and Install Python
 
 !!! tip "System Requirements"
