@@ -1,6 +1,18 @@
 # VLM Tutorial - Car Damage Verification
 
+<script>
+// Redirect to setup guide automatically
+window.location.href = "setup-guide/";
+</script>
+
+<meta http-equiv="refresh" content="0; url=setup-guide/">
+
 Build an interactive AI-powered car verification system using OVHcloud Vision Language Models.
+
+!!! info "Redirecting..."
+    You are being redirected to the [Setup Guide](setup-guide.md). If you are not redirected automatically, please click the link below.
+
+[Go to Setup Guide](setup-guide.md){ .md-button .md-button--primary }
 
 ## What You'll Build
 

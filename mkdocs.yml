@@ -96,9 +96,5 @@ nav:
     - Overview: public-cloud/index.md
     - AI Endpoints:
       - Overview: public-cloud/ai-endpoints/index.md
-      - RAG Tutorial:
-        - Overview: public-cloud/ai-endpoints/rag-tutorial/index.md
-        - Setup Guide: public-cloud/ai-endpoints/rag-tutorial/setup-guide.md
-      - VLM Tutorial:
-        - Overview: public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/index.md
-        - Setup Guide: public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/setup-guide.md
+      - RAG Tutorial: public-cloud/ai-endpoints/rag-tutorial/setup-guide.md
+      - VLM Tutorial: public-cloud/ai-endpoints/vlm-tutorial-car-damage-verfication/setup-guide.md
