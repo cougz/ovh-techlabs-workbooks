@@ -25,4 +25,4 @@ A complete RAG system that:
 ## Resources
 
 - [**Setup Guide**](setup-guide.md) - Complete step-by-step tutorial
-- [**Download Scripts**](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/rag-tutorial) - All Python files
+- [**Source Code**](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/rag-tutorial) - All Python files in official examples repository

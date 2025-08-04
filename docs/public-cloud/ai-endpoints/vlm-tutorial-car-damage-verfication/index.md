@@ -55,7 +55,7 @@ The **Car Verification Challenge** is an interactive fact-checking experiment wh
     - Linux/macOS/Windows environment
 
 [Start Tutorial](setup-guide.md){ .md-button .md-button--primary }
-[Download Scripts](https://github.com/cougz/ovh-techlabs-workbooks/tree/main/public-cloud/ai-endpoints/car-damage-verification-using-vlm){ .md-button }
+[View Source Code](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/car-damage-verification-using-vlm){ .md-button }
 
 ## Technology Stack
 
