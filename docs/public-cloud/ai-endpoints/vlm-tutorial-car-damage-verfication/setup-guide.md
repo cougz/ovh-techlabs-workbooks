@@ -29,16 +29,27 @@ Before we start, let's understand what we'll be building. The VLM car verificati
 
     === "📖 Code Structure"
         **Files Overview**:
-        - `verification_demo.py` - Core VLM integration and verification logic
-        - `verification_app.py` - Chainlit web interface for user interaction
-        - `test_vision_connection.py` - API connectivity testing
-        - `chainlit.md` - Application welcome page and instructions
+        
+        `verification_demo.py`  
+        Core VLM integration and verification logic
+        
+        `verification_app.py`  
+        Chainlit web interface for user interaction
+        
+        `test_vision_connection.py`  
+        API connectivity testing
+        
+        `chainlit.md`  
+        Application welcome page and instructions
+        
+        ---
         
         **Key Features**:
-        - Async image processing with base64 encoding
-        - Multi-modal prompt engineering for VLM
-        - Interactive web interface with file uploads
-        - Real-time AI-powered verification results
+        
+        • **Async image processing** with base64 encoding  
+        • **Multi-modal prompt engineering** for VLM  
+        • **Interactive web interface** with file uploads  
+        • **Real-time AI-powered** verification results
 
     === "🚀 Complete Setup Commands"
         ```bash
