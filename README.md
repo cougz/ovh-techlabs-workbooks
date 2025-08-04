@@ -1,6 +1,16 @@
-# OVHcloud TechLabs - Workbooks and Tutorials
+# OVHcloud TechLabs - Workbooks
 
-A comprehensive collection of tutorials and workbooks for OVHcloud TechLabs.
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+A comprehensive collection of workbooks for OVHcloud TechLabs.
+
+## Project Status
+
+**Status**: Active maintenance - Example project  
+**Support Level**: Community support  
+**Type**: Educational workbooks and documentation
+
+> **Note**: This is not an official OVHcloud product. This repository contains educational workbooks and examples for learning OVHcloud services.
 
 ## Quick Links
 
@@ -12,8 +22,8 @@ A comprehensive collection of tutorials and workbooks for OVHcloud TechLabs.
 ### Public Cloud
 
 #### AI Endpoints
-- **RAG Tutorial** - Build lab-ready RAG systems using OVHcloud AI Endpoints
-- **VLM Tutorial** - Car damage verification using Vision Language Models
+- **RAG Workbook** - Build lab-ready RAG systems using OVHcloud AI Endpoints
+- **VLM Workbook** - Car damage verification using Vision Language Models
 
 ## Development
 
@@ -34,16 +44,38 @@ The documentation is automatically deployed to GitHub Pages using GitHub Actions
 ovh-techlabs-workbooks/
 ├── docs/                    # MkDocs documentation source
 │   ├── assets/             # Images, icons, and static files
-│   ├── en/                 # English documentation
 │   ├── public-cloud/       # Public Cloud documentation
 │   └── stylesheets/        # Custom CSS
-├── public-cloud/           # Tutorial implementations and code
-│   └── ai-endpoints/       # AI Endpoints tutorials
 ├── mkdocs.yml             # MkDocs configuration
 ├── requirements.txt       # Python dependencies
-└── .github/workflows/     # GitHub Actions for deployment
+├── .github/workflows/     # GitHub Actions for deployment
+├── AUTHORS                # Copyright holders
+├── CONTRIBUTING.md        # Contribution guidelines
+├── CONTRIBUTORS           # List of contributors
+├── LICENSE                # Apache 2.0 License
+├── LICENSES/              # License information
+└── MAINTAINERS           # Project maintainers
 ```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to create issues or submit a Pull Request.
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Code of Conduct
+
+Please note that this project follows the OVHcloud code of conduct. By participating, you are expected to uphold this code.
+
+## Support
+
+This is a community-supported project. For questions and issues:
+- Create an issue in this repository
+- Check existing documentation
+- Review closed issues for solutions
+
+## Disclaimer
+
+This repository is not an official OVHcloud product and is maintained by the community for educational purposes.

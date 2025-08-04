@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 OVHcloud
+# SPDX-License-Identifier: Apache-2.0
+
 name: Deploy MkDocs Material to GitHub Pages
 
 on:
