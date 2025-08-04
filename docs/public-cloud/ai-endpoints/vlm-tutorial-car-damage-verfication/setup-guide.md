@@ -204,39 +204,18 @@ The VLM car verification system consists of several key files. Here's what each 
         | `verification_app.py` | Chainlit web interface | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py) |
         | `chainlit.md` | App welcome page | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md) |
 
-    === "🔍 Key Code Snippets"
-        **Core Verification Function** (`verification_demo.py`):
-        ```python
-        async def verify_car_claim(claim_data, uploaded_files):
-            """
-            Verify car claims against uploaded photos using VLM
-            """
-            # Process images and create verification prompt
-            images_data = []
-            for file in uploaded_files:
-                image_data = encode_image_to_base64(file.path)
-                images_data.append(image_data)
-            
-            # Create comprehensive verification prompt
-            prompt = create_verification_prompt(claim_data, len(images_data))
-            
-            # Call OVHcloud Vision API
-            response = await call_vision_api(prompt, images_data)
-            return response
-        ```
+    === "📖 Code Structure"
+        **Files Overview**:
+        - `verification_demo.py` - Core VLM integration and verification logic
+        - `verification_app.py` - Chainlit web interface for user interaction
+        - `test_vision_connection.py` - API connectivity testing
+        - `chainlit.md` - Application welcome page and instructions
         
-        **Chainlit Interface** (`verification_app.py`):
-        ```python
-        @cl.on_chat_start
-        async def start():
-            await cl.Message("🚗 Welcome to the Car Verification Challenge!").send()
-            
-        @cl.on_message
-        async def main(message: cl.Message):
-            # Handle user claims and photo uploads
-            verification_result = await verify_car_claim(claim_data, files)
-            await cl.Message(verification_result).send()
-        ```
+        **Key Features**:
+        - Async image processing with base64 encoding
+        - Multi-modal prompt engineering for VLM
+        - Interactive web interface with file uploads
+        - Real-time AI-powered verification results
 
     === "🚀 Quick Start Commands"
         ```bash
