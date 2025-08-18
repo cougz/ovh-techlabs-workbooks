@@ -10,3 +10,5 @@ Learn to build AI applications using OVHcloud AI Endpoints.
 
 ### [Car Damage Verification Using VLM](car-damage-verification-using-vlm/)
 
+### [Python Chainlit Voice Assistant](python-chainlit-voiceassistant/)
+

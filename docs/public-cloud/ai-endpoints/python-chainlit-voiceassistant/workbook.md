@@ -16,17 +16,18 @@
 
 Before we start, let's understand what we'll be building. This voice assistant combines three powerful AI models in a seamless real-time pipeline:
 
-!!! example "Source Code Overview"
+!!! example "Voice Assistant Overview"
     
-    === "📋 All Files"
-        **Repository**: [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/python-chainlit-voiceassistant)
+    === "📋 What We'll Build"
+        **Complete Voice Assistant Pipeline**:
         
-        | File | Purpose | Action |
-        |------|---------|--------|
-        | `requirements.txt` | Python dependencies | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/requirements.txt) |
-        | `voice_assistant.py` | Main voice assistant application | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/voice_assistant.py) |
-        | `.env.template` | Environment variables template | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/.env.template) |
-        | `.chainlit/config.toml` | Chainlit configuration | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/.chainlit/config.toml) |
+        | Component | Purpose | Implementation |
+        |-----------|---------|----------------|
+        | `voice_assistant.py` | Real-time voice interaction | Chainlit + OVHcloud AI integration |
+        | Audio processing | Speech collection | Browser microphone + HTTPS |
+        | Speech-to-Text | Voice transcription | Whisper-large-v3 model |
+        | Language Model | Intelligent responses | Meta-Llama-3.3-70B-Instruct |
+        | Text-to-Speech | Voice synthesis | Nvr-tts-en-us with multiple voices |
     
     === "📖 Code Structure"
         **Voice Processing Pipeline**:
@@ -54,6 +55,16 @@ Before we start, let's understand what we'll be building. This voice assistant c
         • **Audio File Upload** support for batch processing  
         • **Error Handling** with comprehensive troubleshooting  
         • **Cross-platform Support** for Windows, macOS, and Linux
+
+        **Best for**: Learning voice AI integration and real-time processing concepts
+
+    === "🔮 Future Repository"
+        **Official examples repository:**
+        - Source code will be available in [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/python-chainlit-voiceassistant) (coming soon)
+        - Ready-to-run implementation files
+        - Production-ready code structure
+        
+        **Best for**: Quick deployment and reference implementations
     
     === "🚀 Complete Setup Commands"
         ```bash
@@ -80,26 +91,10 @@ flowchart TD
     style F fill:#6f9,stroke:#333,stroke-width:2px
 ```
 
-## Step 1: Create Your OVHcloud AI Endpoints Token
+## Step 1: API Access Token
 
-!!! tip "AI Endpoints Access Required"
-    You'll need an OVHcloud AI Endpoints access token to use the Whisper, Llama, and TTS models. This token authenticates your requests to the AI services.
-
-### Generate Your Access Token
-
-- [ ] Go to [OVHcloud Control Panel](https://www.ovh.com/manager/)
-- [ ] Navigate to **Public Cloud > AI Endpoints**
-- [ ] Click on **Access and Security**
-- [ ] Click **Generate Token**
-- [ ] Copy your access token (keep it secure)
-
-The token format looks like: `eyJhbGciOiJFZERTQSIsImtpZCI6Ij...`
-
-Expected output:
-```
-✅ Token generated successfully
-🔑 Access token: eyJhbGciOiJFZERTQSIs...
-```
+!!! info "API Key Provided"
+    Your Personal AI Endpoints API key will be provided by your Customer Trainer.
 
 ## Step 2: Set Up Your Development Environment
 
