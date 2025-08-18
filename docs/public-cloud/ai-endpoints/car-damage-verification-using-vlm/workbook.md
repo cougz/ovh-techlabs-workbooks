@@ -51,34 +51,6 @@ Before we start, let's understand what we'll be building. The VLM car verificati
         • **Interactive web interface** with file uploads  
         • **Real-time AI-powered** verification results
 
-    === "🚀 Complete Setup Commands"
-        ```bash
-        # Create demo directory and navigate to it
-        mkdir ~/car-verification-demo
-        cd ~/car-verification-demo
-        
-        # Create Python virtual environment
-        python3 -m venv venv
-        source venv/bin/activate  # Linux/macOS
-        # OR for Windows: venv\Scripts\activate
-        
-        # Download all files at once
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md
-        
-        # Install dependencies
-        pip install -r requirements.txt
-        
-        # Configure your OVHcloud token
-        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here" > .env
-        
-        # Test API connection and run the demo
-        python test_vision_connection.py
-        chainlit run verification_app.py
-        ```
 
 ## Step 1: System Setup and Python Installation
 
@@ -369,32 +341,5 @@ mkdir results
 # rm -rf ~/car-verification-demo
 ```
 
-## Quick Start Commands Summary
-
-```bash
-# Complete demo setup (copy-paste friendly)
-mkdir ~/car-verification-demo && cd ~/car-verification-demo && \
-python3 -m venv venv && source venv/bin/activate
-
-# Download all workbook files
-curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/requirements.txt
-curl -o test_vision_connection.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/test_vision_connection.py
-curl -o verification_demo.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_demo.py
-curl -o verification_app.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/verification_app.py
-curl -o chainlit.md https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/car-damage-verification-using-vlm/chainlit.md
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Create .env with your token
-echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
-echo "QWEN_URL=https://qwen-2-5-vl-72b-instruct.endpoints.kepler.ai.cloud.ovh.net/api/openai_compat/v1/chat/completions" >> .env
-
-# Test connection
-python test_vision_connection.py
-
-# Run the demo
-chainlit run verification_app.py --host 0.0.0.0 --port 8000
-```
 
 This demo successfully demonstrates OVHcloud's Vision Language Model capabilities for practical verification tasks while maintaining clear educational boundaries.

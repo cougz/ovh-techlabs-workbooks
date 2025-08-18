@@ -38,25 +38,6 @@ Before we start building, let's understand what we'll create. This RAG workbook 
         2. User query → Embedding → Similarity search → Context retrieval
         3. Context + Query → LLM → Generated response
 
-    === "🚀 Complete Setup Commands"
-        ```bash
-        # Create project directory and navigate to it
-        mkdir ~/rag-ovh-demo
-        cd ~/rag-ovh-demo
-        
-        # Create Python virtual environment
-        python3 -m venv venv
-        source venv/bin/activate
-        
-        # Install all required dependencies
-        pip install langchain langchain-community faiss-cpu requests openai python-dotenv numpy
-        
-        # Configure your OVHcloud token
-        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_actual_token_here" > .env
-        
-        # The workbook will guide you through creating the Python files step-by-step
-        # This ensures you understand each component of the RAG system
-        ```
 
 ## Step 1: Update System and Install Python
 

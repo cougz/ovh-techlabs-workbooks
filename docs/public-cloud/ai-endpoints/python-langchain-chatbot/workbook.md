@@ -54,38 +54,6 @@ Before we start, let's understand what we'll be building. This workbook covers f
         • **Memory management** for contextual conversations  
         • **Document retrieval** for knowledge-enhanced responses
 
-    === "🚀 Complete Setup Commands"
-        ```bash
-        # Create chatbot directory and navigate to it
-        mkdir ~/langchain-chatbot-demo
-        cd ~/langchain-chatbot-demo
-        
-        # Create Python virtual environment
-        python3 -m venv venv
-        source venv/bin/activate  # Linux/macOS
-        # OR for Windows: venv\Scripts\activate
-        
-        # Download all files at once
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/requirements.txt
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot-streaming.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot-memory.py
-        curl -O https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot-streaming-rag.py
-        mkdir rag-files
-        curl -o rag-files/content.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/rag-files/content.txt
-        
-        # Install dependencies
-        pip install -r requirements.txt
-        
-        # Configure your environment
-        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
-        echo "OVH_AI_ENDPOINTS_MODEL_NAME=Mistral-7B-Instruct-v0.3" >> .env
-        echo "OVH_AI_ENDPOINTS_MODEL_URL=https://mistral-7b-instruct-v03.endpoints.kepler.ai.cloud.ovh.net/api/openai_compat/v1" >> .env
-        echo "OVH_AI_ENDPOINTS_EMBEDDING_MODEL_NAME=multilingual-e5-large" >> .env
-        
-        # Test the basic chatbot
-        python chatbot.py
-        ```
 
 ## Step 1: System Setup and Python Installation
 
@@ -498,34 +466,5 @@ cp -r rag-files implementations-backup/
 # rm -rf ~/langchain-chatbot-demo
 ```
 
-## Quick Start Commands Summary
-
-```bash
-# Complete setup (copy-paste friendly)
-mkdir ~/langchain-chatbot-demo && cd ~/langchain-chatbot-demo
-python3 -m venv venv && source venv/bin/activate
-
-# Download all files
-curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/requirements.txt
-curl -o chatbot.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot.py
-curl -o chatbot-streaming.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot-streaming.py
-curl -o chatbot-memory.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot-memory.py
-curl -o chatbot-streaming-rag.py https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/chatbot-streaming-rag.py
-mkdir rag-files
-curl -o rag-files/content.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-langchain-chatbot/rag-files/content.txt
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure environment
-echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
-echo "OVH_AI_ENDPOINTS_MODEL_NAME=Mistral-7B-Instruct-v0.3" >> .env
-echo "OVH_AI_ENDPOINTS_MODEL_URL=https://your-model-endpoint-url" >> .env
-echo "OVH_AI_ENDPOINTS_EMBEDDING_MODEL_NAME=multilingual-e5-large" >> .env
-
-# Load environment and test
-set -a && source .env && set +a
-python chatbot.py
-```
 
 This workbook successfully demonstrates progressive chatbot development using LangChain and OVHcloud AI Endpoints, from basic implementations to advanced RAG systems with streaming and memory capabilities.
