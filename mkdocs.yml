@@ -105,9 +105,11 @@ nav:
       - Python LangChain Chatbot:
         - Overview: public-cloud/ai-endpoints/python-langchain-chatbot/index.md
         - Workbook: public-cloud/ai-endpoints/python-langchain-chatbot/workbook.md
-      - LLM Fine-Tuning:
-        - Overview: public-cloud/ai-endpoints/llm-fine-tuning/index.md
-        - Workbook: public-cloud/ai-endpoints/llm-fine-tuning/workbook.md
       - Car Damage Verification Using VLM:
         - Overview: public-cloud/ai-endpoints/car-damage-verification-using-vlm/index.md
         - Workbook: public-cloud/ai-endpoints/car-damage-verification-using-vlm/workbook.md
+    - AI Training:
+      - Overview: public-cloud/ai-training/index.md
+      - LLM Fine-Tuning:
+        - Overview: public-cloud/ai-training/llm-fine-tuning/index.md
+        - Workbook: public-cloud/ai-training/llm-fine-tuning/workbook.md
