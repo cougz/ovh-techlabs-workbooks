@@ -31,7 +31,7 @@ Before we start, let's understand what we'll be building. This workbook covers t
         | `dataset/DatasetCreation.py` | Generate training data from documentation | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/dataset/DatasetCreation.py) |
         | `dataset/DatasetAugmentation.py` | Create synthetic training data | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/dataset/DatasetAugmentation.py) |
         | `notebook/instruct-lora-1b-ai-endpoints.yml` | Axolotl training configuration | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/notebook/instruct-lora-1b-ai-endpoints.yml) |
-        | `notebook/axolto-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb` | Training notebook | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/notebook/axolto-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb) |
+        | `notebook/axolotl-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb` | Training notebook | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/notebook/axolotl-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb) |
         | `chatbot/chatbot.py` | Testing chatbot interface | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/chatbot/chatbot.py) |
         | `chatbot/Dockerfile` | Docker container for chatbot | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/chatbot/Dockerfile) |
         | `chatbot/requirements.txt` | Chatbot dependencies | [📥 Download](https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/llm-fine-tune/chatbot/requirements.txt) |
@@ -48,7 +48,7 @@ Before we start, let's understand what we'll be building. This workbook covers t
         `notebook/instruct-lora-1b-ai-endpoints.yml`  
         Axolotl configuration for LoRA fine-tuning of Llama-3.2-1B-Instruct
         
-        `notebook/axolto-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb`  
+        `notebook/axolotl-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb`  
         Jupyter notebook for running the training process on OVHcloud AI Notebooks
         
         `chatbot/chatbot.py`  
@@ -86,7 +86,7 @@ Before we start, let's understand what we'll be building. This workbook covers t
         
         # 4. Launch AI Notebook for training
         ovhai notebook run conda jupyterlab \
-            --name axolto-llm-fine-tune \
+            --name axolotl-llm-fine-tune \
             --framework-version 25.3.1-py312-cudadevel128-gpu \
             --flavor l4-1-gpu \
             --gpu 1 \
@@ -322,7 +322,7 @@ Total training examples: 456
 ```bash
 # Launch AI Notebook with GPU support
 ovhai notebook run conda jupyterlab \
-    --name axolto-llm-fine-tune \
+    --name axolotl-llm-fine-tune \
     --framework-version 25.3.1-py312-cudadevel128-gpu \
     --flavor l4-1-gpu \
     --gpu 1 \
@@ -334,7 +334,7 @@ ovhai notebook run conda jupyterlab \
 
 Expected output:
 ```
-✅ Notebook "axolto-llm-fine-tune" created successfully
+✅ Notebook "axolotl-llm-fine-tune" created successfully
 🔗 Access URL: https://12345678-9abc-def0-1234-56789abcdef0.notebook.gra.ai.cloud.ovh.net
 🖥️  Instance: l4-1-gpu (1 GPU, 24GB VRAM)
 ⏱️  Estimated startup time: 2-3 minutes
@@ -349,7 +349,7 @@ Expected output:
 ovhai notebook list
 
 # Get detailed info
-ovhai notebook get axolto-llm-fine-tune
+ovhai notebook get axolotl-llm-fine-tune
 ```
 
 ## Step 6: Upload Training Data to AI Notebook
@@ -490,7 +490,7 @@ special_tokens:
 
 ### Open Training Notebook
 
-1. In JupyterLab, open `axolto-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb`
+1. In JupyterLab, open `axolotl-llm-fine-tune-Meta-Llama-3.2-1B-instruct-ai-endpoints.ipynb`
 2. Execute each cell sequentially
 
 ### Install Dependencies
@@ -805,10 +805,10 @@ print(f"✅ Model accuracy: {accuracy:.2%}")
 
 ```bash
 # Stop the training notebook
-ovhai notebook stop axolto-llm-fine-tune
+ovhai notebook stop axolotl-llm-fine-tune
 
 # Optional: Delete if no longer needed
-ovhai notebook delete axolto-llm-fine-tune
+ovhai notebook delete axolotl-llm-fine-tune
 ```
 
 ### Stop AI Deploy Application
@@ -903,7 +903,7 @@ python dataset/DatasetAugmentation.py
 
 # 3. Launch training
 ovhai notebook run conda jupyterlab \
-    --name axolto-llm-fine-tune \
+    --name axolotl-llm-fine-tune \
     --framework-version 25.3.1-py312-cudadevel128-gpu \
     --flavor l4-1-gpu --gpu 1 \
     --volume https://github.com/ovh/public-cloud-examples.git:/workspace/public-cloud-examples:RW \
