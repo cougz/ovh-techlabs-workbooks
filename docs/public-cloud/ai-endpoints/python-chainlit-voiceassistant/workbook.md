@@ -23,6 +23,7 @@ Before we start, let's understand what we'll be building. This voice assistant c
         
         | Component | Purpose | Implementation |
         |-----------|---------|----------------|
+        | `requirements.txt` | Python dependencies | All required packages |
         | `voice_assistant.py` | Real-time voice interaction | Chainlit + OVHcloud AI integration |
         | Audio processing | Speech collection | Browser microphone + HTTPS |
         | Speech-to-Text | Voice transcription | Whisper-large-v3 model |
@@ -65,17 +66,6 @@ Before we start, let's understand what we'll be building. This voice assistant c
         - Production-ready code structure
         
         **Best for**: Quick deployment and reference implementations
-    
-    === "🚀 Complete Setup Commands"
-        ```bash
-        # Quick setup for experienced users
-        python3 -m venv venv  # Use python3 on Linux/macOS
-        source venv/bin/activate  # On Windows: venv\Scripts\activate
-        pip install chainlit openai requests python-dotenv pyaudio pydub numpy aiofiles
-        echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
-        openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
-        chainlit run voice_assistant.py --host 0.0.0.0 --port 8443 --ssl-key key.pem --ssl-cert cert.pem
-        ```
 
 ```mermaid
 flowchart TD
@@ -94,7 +84,7 @@ flowchart TD
 ## Step 1: API Access Token
 
 !!! info "API Key Provided"
-    Your Personal AI Endpoints API key will be provided by your Customer Trainer.
+    Your Personal API Endpoints API key will be provided by your Customer Trainer.
 
 ## Step 2: Set Up Your Development Environment
 
@@ -130,10 +120,14 @@ You should see your prompt change to indicate the virtual environment is active:
 
 ## Step 3: Install Required Dependencies
 
-Install all the necessary Python packages for the voice assistant:
+Download the requirements file and install all necessary packages:
 
 ```bash
-pip install chainlit openai requests python-dotenv pyaudio pydub numpy aiofiles
+# Download requirements.txt
+curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/requirements.txt
+
+# Install all dependencies
+pip install -r requirements.txt
 ```
 
 ### Install System Dependencies (if needed)
@@ -930,7 +924,10 @@ For experienced developers, here's the complete setup in one block:
 ```bash
 # Environment setup
 python -m venv venv && source venv/bin/activate
-pip install chainlit openai requests python-dotenv pyaudio pydub numpy aiofiles
+
+# Download and install dependencies
+curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/requirements.txt
+pip install -r requirements.txt
 
 # Configuration
 echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
