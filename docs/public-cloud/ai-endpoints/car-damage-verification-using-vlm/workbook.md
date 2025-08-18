@@ -131,35 +131,10 @@ Before we start, let's understand what we'll be building. The VLM car verificati
     python --version
     ```
 
-## Step 2: Get OVHcloud AI Endpoints Access Token
+## Step 2: API Access Token
 
-!!! warning "Vision Model Access Required"
-    This workbook requires access to OVHcloud's Qwen2.5-VL-72B-Instruct model. You'll need an AI Endpoints access token.
-
-### Token Acquisition Steps
-
-- [ ] Go to [OVHcloud AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/)
-- [ ] Create account or sign in
-- [ ] Navigate to **Public Cloud** dashboard
-- [ ] Create or select existing Public Cloud Project
-- [ ] Go to **AI Endpoints** → **API keys**
-- [ ] Click **Create a new API key**
-- [ ] Copy the generated token
-
-!!! tip "Token Storage"
-    Keep your token secure - we'll store it in environment variables for safety.
-
-```mermaid
-flowchart TD
-    A[Start] --> B[OVHcloud Account]
-    B --> C[Public Cloud Project]
-    C --> D[AI Endpoints Section]
-    D --> E[Create API Key]
-    E --> F[Copy Token]
-    F --> G[Use in Demo]
-    style E fill:#f96,stroke:#333,stroke-width:2px
-    style F fill:#f96,stroke:#333,stroke-width:2px
-```
+!!! info "API Key Provided"
+    Your Personal API Endpoints API key will be provided by your Customer Trainer.
 
 ## Step 3: Create Demo Environment
 
