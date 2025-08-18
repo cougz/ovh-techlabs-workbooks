@@ -451,6 +451,193 @@ pip install -r requirements.txt
 - Verify streaming parameter is set to `True`
 - Monitor console output for error messages
 
+## Step 13: Customize Your Knowledge Base
+
+!!! success "Take It Further!"
+    Now that you've mastered the basics, it's time to make the RAG chatbot truly your own by adding custom knowledge content.
+
+The RAG chatbot uses the `rag-files/content.txt` file as its knowledge base. Let's customize it with your own domain expertise to see how the chatbot adapts to different types of knowledge.
+
+### Understanding the Current Knowledge Base
+
+First, let's examine what's currently in the knowledge base:
+
+```bash
+# View the current content
+cat rag-files/content.txt
+```
+
+You'll see it contains information about OVHcloud AI Endpoints. Now let's replace this with your own knowledge!
+
+### Customization Ideas
+
+Choose one of these approaches based on your interests:
+
+=== "Technical Documentation"
+    **Create a technical knowledge base:**
+    
+    ```bash
+    # Backup original content
+    cp rag-files/content.txt rag-files/content-original.txt
+    
+    # Create new technical content
+    cat > rag-files/content.txt << 'EOF'
+    Python is a high-level programming language known for its simplicity and readability. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.
+
+    Virtual environments in Python allow you to create isolated Python installations for different projects. You can create a virtual environment using 'python -m venv myenv' and activate it with 'source myenv/bin/activate' on Linux/Mac or 'myenv\Scripts\activate' on Windows.
+
+    LangChain is a framework for developing applications powered by language models. It provides abstractions for working with LLMs, memory management, and tool integration. The framework supports multiple model providers and offers components for building RAG systems.
+
+    Docker is a containerization platform that packages applications and their dependencies into lightweight containers. You can build images using Dockerfiles and run containers with 'docker run'. Docker Compose allows you to define multi-container applications using YAML files.
+    EOF
+    ```
+
+=== "Business Knowledge"
+    **Create a business/company knowledge base:**
+    
+    ```bash
+    # Backup original content
+    cp rag-files/content.txt rag-files/content-original.txt
+    
+    # Create new business content
+    cat > rag-files/content.txt << 'EOF'
+    Our company offers comprehensive cloud consulting services including infrastructure design, migration planning, and security assessments. We specialize in multi-cloud strategies and hybrid deployments.
+
+    Our pricing model is based on project complexity and duration. Small projects start at $5,000, medium projects range from $15,000-$50,000, and enterprise implementations begin at $100,000. We offer flexible payment terms and maintenance packages.
+
+    Our support team operates 24/7 with guaranteed response times of 1 hour for critical issues, 4 hours for high priority, and 24 hours for standard requests. We provide phone, email, and chat support in multiple languages.
+
+    We follow industry best practices for security including SOC 2 compliance, regular penetration testing, and encrypted communications. All client data is stored in geographically distributed data centers with automatic backups.
+    EOF
+    ```
+
+=== "Educational Content"
+    **Create an educational knowledge base:**
+    
+    ```bash
+    # Backup original content
+    cp rag-files/content.txt rag-files/content-original.txt
+    
+    # Create new educational content
+    cat > rag-files/content.txt << 'EOF'
+    Machine learning is a subset of artificial intelligence that enables computers to learn and improve from experience without being explicitly programmed. The three main types are supervised learning, unsupervised learning, and reinforcement learning.
+
+    Supervised learning uses labeled training data to learn a mapping function from inputs to outputs. Common algorithms include linear regression for continuous outputs and logistic regression for classification tasks. Decision trees and random forests are popular for their interpretability.
+
+    Neural networks are computing systems inspired by biological neural networks. They consist of layers of interconnected nodes (neurons) that process information. Deep learning uses neural networks with multiple hidden layers to learn complex patterns in data.
+
+    Natural Language Processing (NLP) enables computers to understand, interpret, and generate human language. Key tasks include tokenization, part-of-speech tagging, named entity recognition, and sentiment analysis. Modern NLP relies heavily on transformer architectures.
+    EOF
+    ```
+
+=== "Personal Interest"
+    **Create content about your hobby or interest:**
+    
+    ```bash
+    # Backup original content
+    cp rag-files/content.txt rag-files/content-original.txt
+    
+    # Example: Cooking knowledge base
+    cat > rag-files/content.txt << 'EOF'
+    Cooking pasta requires boiling salted water at a ratio of 1 liter per 100g of pasta. Add pasta when water reaches a rolling boil and stir immediately to prevent sticking. Most dried pasta cooks in 8-12 minutes depending on shape and thickness.
+
+    Knife skills are fundamental to cooking. Keep knives sharp for safety and efficiency. The basic cuts include julienne (matchstick), brunoise (small dice), chiffonade (thin strips for herbs), and rough chop. Always use a stable cutting board and proper hand positioning.
+
+    Food safety requires maintaining proper temperatures: refrigerate perishables below 40°F, cook poultry to 165°F, and ground meats to 160°F. Follow the two-hour rule: don't leave food at room temperature for more than two hours, or one hour if ambient temperature exceeds 90°F.
+
+    Seasoning should be done in layers throughout cooking, not just at the end. Salt enhances natural flavors and should be added early. Acids like lemon juice or vinegar brighten flavors and should often be added near the end of cooking to preserve their impact.
+    EOF
+    ```
+
+### Test Your Custom Knowledge Base
+
+After updating the content, test how your chatbot responds to questions about your new knowledge domain:
+
+```bash
+# Test the customized RAG chatbot
+python chatbot-streaming-rag.py
+```
+
+**Try these test questions based on your chosen content:**
+
+- **Technical**: "How do I create a virtual environment in Python?"
+- **Business**: "What are your pricing models for cloud consulting?"
+- **Educational**: "What is the difference between supervised and unsupervised learning?"
+- **Personal**: "How long should I cook pasta?"
+
+### Advanced Customization Challenges
+
+🎯 **Challenge 1: Multiple Knowledge Sources**
+```bash
+# Create a more comprehensive knowledge base
+cat company_info.txt product_docs.txt faq.txt > rag-files/content.txt
+```
+
+🎯 **Challenge 2: Structured Knowledge**
+```bash
+# Add section headers to organize knowledge
+cat > rag-files/content.txt << 'EOF'
+=== GETTING STARTED ===
+[Your getting started content here]
+
+=== ADVANCED FEATURES ===
+[Your advanced content here]
+
+=== TROUBLESHOOTING ===
+[Your troubleshooting content here]
+EOF
+```
+
+🎯 **Challenge 3: Domain-Specific Terminology**
+```bash
+# Include specialized terms and definitions
+cat > rag-files/content.txt << 'EOF'
+API (Application Programming Interface): A set of protocols and tools for building software applications...
+[Continue with your domain-specific glossary]
+EOF
+```
+
+### Experimentation Ideas
+
+**Compare Response Quality:**
+1. Test the same question with original OVHcloud content
+2. Test with your custom content
+3. Observe how response style and accuracy change
+
+**Knowledge Gaps Testing:**
+1. Ask questions your knowledge base can't answer
+2. Notice how the chatbot handles unknown topics
+3. Experiment with adding more specific content
+
+**Content Format Testing:**
+1. Try bullet points vs. paragraphs
+2. Test structured vs. conversational content
+3. Experiment with different content lengths
+
+### Share Your Results
+
+!!! tip "Document Your Experiments"
+    ```bash
+    # Create an experiment log
+    echo "=== My RAG Chatbot Experiments ===" > experiment_log.txt
+    echo "Knowledge Domain: [Your chosen domain]" >> experiment_log.txt
+    echo "Test Questions:" >> experiment_log.txt
+    echo "1. [Your question]" >> experiment_log.txt
+    echo "Response: [Chatbot response]" >> experiment_log.txt
+    echo "Analysis: [Your observations]" >> experiment_log.txt
+    ```
+
+### Restore Original Content
+
+If you want to return to the original OVHcloud content:
+
+```bash
+# Restore original content
+cp rag-files/content-original.txt rag-files/content.txt
+```
+
+**Congratulations!** 🎉 You've now experienced the full power of RAG systems - the ability to create domain-specific AI assistants by simply changing the knowledge base content. This is exactly how production RAG systems work: they combine the reasoning capabilities of large language models with your specific knowledge domain.
+
 ## Clean Up
 
 ```bash
