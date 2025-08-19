@@ -230,11 +230,7 @@ Expected output:
 
 ## Step 6: Create the Voice Assistant Application
 
-Create the main application file:
-
-```bash
-nano voice_assistant.py
-```
+Create the main application file `voice_assistant.py` with the following contents:
 
 ```python
 import os
@@ -253,12 +249,12 @@ ai_endpoint_token = os.getenv("OVH_AI_ENDPOINTS_ACCESS_TOKEN")
 if not ai_endpoint_token:
     raise ValueError("OVH_AI_ENDPOINTS_ACCESS_TOKEN not found in .env file")
 
-# OVHcloud AI Endpoints for the three models
+# Endpoints for your specified models
 WHISPER_ENDPOINT = "https://whisper-large-v3.endpoints.kepler.ai.cloud.ovh.net/api/openai_compat/v1"
 LLAMA_ENDPOINT = "https://llama-3-3-70b-instruct.endpoints.kepler.ai.cloud.ovh.net/api/openai_compat/v1"
 TTS_ENDPOINT = "https://nvr-tts-en-us.endpoints.kepler.ai.cloud.ovh.net/api/v1/tts/text_to_audio"
 
-# Available TTS voices
+# Available TTS voices (female options)
 TTS_VOICES = {
     "English-US.Female-1": "Female Standard",
     "English-US.Female-Neutral": "Female Neutral", 
@@ -302,7 +298,7 @@ async def on_settings_update(settings: dict):
     status = "enabled" if settings.get("tts_enabled") else "disabled"
     await cl.Message(content=f"⚙️ Settings updated: TTS {status}, Voice: {voice_display}").send()
 
-# Audio handlers for real-time voice processing
+# Simplified audio handlers without custom VAD logic
 
 @cl.on_audio_start
 async def on_audio_start():
@@ -355,7 +351,7 @@ async def process_audio_chunks():
                 wav_file.writeframes(combined_audio)
             temp_path = temp_file.name
         
-        # Transcribe with Whisper
+        # Transcribe with Whisper (no UI message for speed)
         transcript = await whisper_transcription_from_file(temp_path)
         os.unlink(temp_path)
         
@@ -393,6 +389,20 @@ async def whisper_transcription_from_file(file_path):
         print(f"❌ Whisper error: {e}")
         return ""
 
+async def whisper_transcription(audio_data):
+    """Transcribe audio data using Whisper-large-v3"""
+    try:
+        with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as temp_file:
+            temp_file.write(audio_data)
+            temp_file_path = temp_file.name
+        
+        result = await whisper_transcription_from_file(temp_file_path)
+        os.unlink(temp_file_path)
+        return result
+        
+    except Exception as e:
+        return ""
+
 async def llama_response(text):
     """Get response from Meta-Llama-3_3-70B-Instruct"""
     try:
@@ -427,7 +437,7 @@ async def nvr_tts_synthesis(text, voice_name=DEFAULT_TTS_VOICE):
             "encoding": 1,
             "language_code": "en-US", 
             "sample_rate_hz": 16000,
-            "text": text[:150],  # Limit text length
+            "text": text[:150],
             "voice_name": voice_name
         }
         
@@ -437,6 +447,7 @@ async def nvr_tts_synthesis(text, voice_name=DEFAULT_TTS_VOICE):
             return response.content
         else:
             print(f"❌ TTS error: {response.status_code}")
+            print(f"❌ TTS response: {response.text}")
             return None
             
     except Exception as e:
@@ -493,20 +504,6 @@ async def on_message(message: cl.Message):
         response = await llama_response(message.content)
         await send_assistant_response(response)
 
-async def whisper_transcription(audio_data):
-    """Transcribe audio data using Whisper-large-v3"""
-    try:
-        with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as temp_file:
-            temp_file.write(audio_data)
-            temp_file_path = temp_file.name
-        
-        result = await whisper_transcription_from_file(temp_file_path)
-        os.unlink(temp_file_path)
-        return result
-        
-    except Exception as e:
-        return ""
-
 if __name__ == "__main__":
     cl.run()
 ```
@@ -528,16 +525,13 @@ Create the Chainlit configuration directory:
 mkdir -p .chainlit
 ```
 
-Create the configuration file:
-
-```bash
-nano .chainlit/config.toml
-```
+Create the configuration file `.chainlit/config.toml` with the following contents:
 
 ```toml
 [project]
 # Whether to enable telemetry (default: true). No personal data is collected.
 enable_telemetry = true
+
 
 # List of environment variables to be provided by each user to use the app.
 user_env = []
@@ -551,8 +545,11 @@ cache = false
 # Authorized origins
 allow_origins = ["*"]
 
+# Follow symlink for asset mount (see https://github.com/Chainlit/chainlit/issues/317)
+# follow_symlink = false
+
 [features]
-# Process and display HTML in messages. This can be a security risk
+# Process and display HTML in messages. This can be a security risk (see https://stackoverflow.com/questions/19603097/why-is-it-dangerous-to-render-user-generated-html-or-javascript)
 unsafe_allow_html = false
 
 # Process and display mathematical expressions. This can clash with "$" characters in messages.
@@ -589,14 +586,69 @@ edit_message = true
 # Name of the assistant.
 name = "Voice Assistant"
 
+# Description of the assistant. This is used for HTML tags.
+# description = ""
+
 # Large size content are by default collapsed for a cleaner ui
 default_collapse_content = true
 
 # Chain of Thought (CoT) display mode. Can be "hidden", "tool_call" or "full".
 cot = "full"
 
+# Link to your github repo. This will add a github button in the UI's header.
+# github = ""
+
+# Specify a CSS file that can be used to customize the user interface.
+# The CSS file can be served from the public directory or via an external link.
+# custom_css = "/public/test.css"
+
+# Specify a Javascript file that can be used to customize the user interface.
+# The Javascript file can be served from the public directory.
+custom_js = "/public/firefox-fix.js"
+
+# Specify a custom font url.
+# custom_font = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+
+# Specify a custom meta image url.
+# custom_meta_image_url = "https://chainlit-cloud.s3.eu-west-3.amazonaws.com/logo/chainlit_banner.png"
+
+# Specify a custom build directory for the frontend.
+# This can be used to customize the frontend code.
+# Be careful: If this is a relative path, it should not start with a slash.
+# custom_build = "./public/build"
+
 [UI.theme]
     default = "dark"
+    #layout = "wide"
+    #font_family = "Inter, sans-serif"
+# Override default MUI light theme. (Check theme.ts)
+[UI.theme.light]
+    #background = "#FAFAFA"
+    #paper = "#FFFFFF"
+
+    [UI.theme.light.primary]
+        #main = "#F80061"
+        #dark = "#980039"
+        #light = "#FFE7EB"
+    [UI.theme.light.text]
+        #primary = "#212121"
+        #secondary = "#616161"
+
+# Override default MUI dark theme. (Check theme.ts)
+[UI.theme.dark]
+    #background = "#FAFAFA"
+    #paper = "#FFFFFF"
+
+    [UI.theme.dark.primary]
+        #main = "#F80061"
+        #dark = "#980039"
+        #light = "#FFE7EB"
+    [UI.theme.dark.text]
+        #primary = "#EEEEEE"
+        #secondary = "#BDBDBD"
+
+[meta]
+generated_by = "1.1.402"
 ```
 
 This configuration:
