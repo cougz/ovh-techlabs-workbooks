@@ -517,147 +517,7 @@ This complete implementation provides:
 - **Settings panel** for voice customization
 - **Error handling** for robust operation
 
-## Step 7: Configure Chainlit Settings
-
-Create the Chainlit configuration directory:
-
-```bash
-mkdir -p .chainlit
-```
-
-Create the configuration file `.chainlit/config.toml` with the following contents:
-
-```toml
-[project]
-# Whether to enable telemetry (default: true). No personal data is collected.
-enable_telemetry = true
-
-
-# List of environment variables to be provided by each user to use the app.
-user_env = []
-
-# Duration (in seconds) during which the session is saved when the connection is lost
-session_timeout = 3600
-
-# Enable third parties caching (e.g LangChain cache)
-cache = false
-
-# Authorized origins
-allow_origins = ["*"]
-
-# Follow symlink for asset mount (see https://github.com/Chainlit/chainlit/issues/317)
-# follow_symlink = false
-
-[features]
-# Process and display HTML in messages. This can be a security risk (see https://stackoverflow.com/questions/19603097/why-is-it-dangerous-to-render-user-generated-html-or-javascript)
-unsafe_allow_html = false
-
-# Process and display mathematical expressions. This can clash with "$" characters in messages.
-latex = false
-
-# Automatically tag threads with the current chat profile (if a chat profile is used)
-auto_tag_thread = true
-
-# Authorize users to spontaneously upload files with messages
-[features.spontaneous_file_upload]
-    enabled = true
-    accept = ["*/*"]
-    max_files = 20
-    max_size_mb = 500
-
-[features.audio]
-    enabled = true
-    # Threshold for audio recording
-    min_decibels = -45
-    # Delay for the user to start speaking in MS
-    initial_silence_timeout = 3000
-    # Delay for the user to continue speaking in MS. If the user stops speaking for this duration, the recording will stop.
-    silence_timeout = 1500
-    # Above this duration (MS), the recording will forcefully stop.
-    max_duration = 15000
-    # Duration of the audio chunks in MS
-    chunk_duration = 1000
-    # Sample rate of the audio
-    sample_rate = 24000
-
-edit_message = true
-
-[UI]
-# Name of the assistant.
-name = "Voice Assistant"
-
-# Description of the assistant. This is used for HTML tags.
-# description = ""
-
-# Large size content are by default collapsed for a cleaner ui
-default_collapse_content = true
-
-# Chain of Thought (CoT) display mode. Can be "hidden", "tool_call" or "full".
-cot = "full"
-
-# Link to your github repo. This will add a github button in the UI's header.
-# github = ""
-
-# Specify a CSS file that can be used to customize the user interface.
-# The CSS file can be served from the public directory or via an external link.
-# custom_css = "/public/test.css"
-
-# Specify a Javascript file that can be used to customize the user interface.
-# The Javascript file can be served from the public directory.
-custom_js = "/public/firefox-fix.js"
-
-# Specify a custom font url.
-# custom_font = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-
-# Specify a custom meta image url.
-# custom_meta_image_url = "https://chainlit-cloud.s3.eu-west-3.amazonaws.com/logo/chainlit_banner.png"
-
-# Specify a custom build directory for the frontend.
-# This can be used to customize the frontend code.
-# Be careful: If this is a relative path, it should not start with a slash.
-# custom_build = "./public/build"
-
-[UI.theme]
-    default = "dark"
-    #layout = "wide"
-    #font_family = "Inter, sans-serif"
-# Override default MUI light theme. (Check theme.ts)
-[UI.theme.light]
-    #background = "#FAFAFA"
-    #paper = "#FFFFFF"
-
-    [UI.theme.light.primary]
-        #main = "#F80061"
-        #dark = "#980039"
-        #light = "#FFE7EB"
-    [UI.theme.light.text]
-        #primary = "#212121"
-        #secondary = "#616161"
-
-# Override default MUI dark theme. (Check theme.ts)
-[UI.theme.dark]
-    #background = "#FAFAFA"
-    #paper = "#FFFFFF"
-
-    [UI.theme.dark.primary]
-        #main = "#F80061"
-        #dark = "#980039"
-        #light = "#FFE7EB"
-    [UI.theme.dark.text]
-        #primary = "#EEEEEE"
-        #secondary = "#BDBDBD"
-
-[meta]
-generated_by = "1.1.402"
-```
-
-This configuration:
-- Enables audio features with optimal settings
-- Sets appropriate timeouts for voice interaction
-- Configures file upload support
-- Sets the sample rate to 24kHz for high-quality audio
-
-## Step 8: Launch Your Voice Assistant
+## Step 7: Launch Your Voice Assistant
 
 !!! tip "Browser Compatibility"
     Chrome and Edge provide the best audio support. Firefox may have microphone access issues with self-signed certificates.
@@ -687,7 +547,7 @@ When you first visit `https://localhost:8443`, your browser will show a security
 
 This is safe for development since you generated the certificate yourself.
 
-## Step 9: Testing Your Voice Assistant
+## Step 8: Testing Your Voice Assistant
 
 ### Voice Recording Test
 
@@ -1005,7 +865,6 @@ pip install -r requirements.txt
 
 # Configuration
 echo "OVH_AI_ENDPOINTS_ACCESS_TOKEN=your_token_here" > .env
-mkdir -p .chainlit
 
 # SSL certificates
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes \
