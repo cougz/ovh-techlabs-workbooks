@@ -61,7 +61,7 @@ Before we start, let's understand what we'll be building. This voice assistant c
 
     === "🔮 Future Repository"
         **Official examples repository:**
-        - Source code will be available in [ovh/public-cloud-examples](https://github.com/ovh/public-cloud-examples/tree/main/ai/ai-endpoints/python-chainlit-voiceassistant) (coming soon)
+        - Source code will be available in ovh/public-cloud-examples (coming soon)
         - Ready-to-run implementation files
         - Production-ready code structure
         
@@ -90,6 +90,16 @@ flowchart TD
 
 !!! warning "Python Version Requirement"
     Ensure you have Python 3.8 or higher installed. Some audio processing libraries require recent Python versions.
+
+First, create a project directory and navigate to it:
+
+```bash
+# Create project directory
+mkdir voice-assistant
+cd voice-assistant
+```
+
+Now set up your virtual environment:
 
 === "Linux/macOS"
     ```bash
@@ -120,13 +130,22 @@ You should see your prompt change to indicate the virtual environment is active:
 
 ## Step 3: Install Required Dependencies
 
-Download the requirements file and install all necessary packages:
+Create a `requirements.txt` file with the following contents:
+
+```txt
+chainlit
+numpy
+requests
+openai
+pyaudio
+pydub
+python-dotenv
+aiofiles
+```
+
+Then install all dependencies:
 
 ```bash
-# Download requirements.txt
-curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/requirements.txt
-
-# Install all dependencies
 pip install -r requirements.txt
 ```
 
@@ -922,11 +941,14 @@ tar -czf voice-assistant-backup.tar.gz voice_assistant.py .chainlit/ requirement
 For experienced developers, here's the complete setup in one block:
 
 ```bash
+# Create project directory
+mkdir voice-assistant && cd voice-assistant
+
 # Environment setup
 python -m venv venv && source venv/bin/activate
 
-# Download and install dependencies
-curl -o requirements.txt https://raw.githubusercontent.com/ovh/public-cloud-examples/main/ai/ai-endpoints/python-chainlit-voiceassistant/requirements.txt
+# Create requirements.txt with dependencies (see Step 3 for contents)
+# Then install
 pip install -r requirements.txt
 
 # Configuration
